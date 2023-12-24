@@ -17,10 +17,8 @@ const dictionary: { [key: string]: string } = {
     'eight': '8',
     'nine': '9'
 };
-const regex = new RegExp([...Object.keys(dictionary), ...Object.values(dictionary)].join('|'), 'g');
 
 (() => {
-    
     const filePath = program.opts().file;
     const fileContent = readFileSync(filePath, 'utf8');
     const lines = fileContent.split('\n');
@@ -30,7 +28,6 @@ const regex = new RegExp([...Object.keys(dictionary), ...Object.values(dictionar
                 [...curr.matchAll(new RegExp(`${c}|${dictionary[c]}`, 'g'))].forEach(m => {
                     p[m.index] = dictionary[c];
                 })
-    
                 return p;
             }, {})
         )
