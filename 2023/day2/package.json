@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --build",
-    "dev1": "ts-node src/part1.ts -f ./puzzle-dev.txt",
-    "start1": "ts-node src/part1.ts -f ./puzzle.txt",
-    "dev2": "ts-node src/part2.ts -f ./puzzle-dev2.txt",
-    "start2": "ts-node src/part2.ts -f ./puzzle.txt"
+    "dev": "ts-node src/resolver.ts -f ./puzzle-dev.txt",
+    "start": "ts-node src/resolver.ts -f ./puzzle.txt"
   },
   "keywords": [],
   "author": "",
